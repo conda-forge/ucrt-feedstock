@@ -1,6 +1,6 @@
 @echo on
-REM Avoid circular dependency issues with p7zip dependending on ucrt
-conda.exe create -p %BUILD_PREFIX%  p7zip --yes --quiet -c conda-forge
+REM Avoid circular dependency issues with 7zip dependending on ucrt
+conda.exe create -p %BUILD_PREFIX%  7zip --yes --quiet -c conda-forge
 mkdir %LIBRARY_BIN%
 7z x 22621.1.220506-1250.ni_release_WindowsSDK.iso -aoa
 if errorlevel 1 exit 1
