@@ -1,13 +1,15 @@
 {% set name = "ucrt" %}
-{% set version = "10.0.22621.0" %}
+{% set version = "10.0.26100.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/22621.1.220506-1250.ni_release_WindowsSDK.iso
-  sha256: 0412fc77e364226c9395e3188a2d0ac5888317fecfba7bc2dbe003c2ddb5b3d3
+  # from https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+  url: https://go.microsoft.com/fwlink/?linkid=2272523
+  fn: release_WindowsSDK.iso
+  sha256: d075796a95cba563c3fc86e6dab10c17530d2b47d5dae3534fbfa7d3dfef541a
 
 build:
   number: 0
