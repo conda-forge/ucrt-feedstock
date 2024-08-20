@@ -1,8 +1,7 @@
-{% set name = "ucrt" %}
 {% set version = "10.0.26100.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: ucrt
   version: {{ version }}
 
 source:
@@ -28,10 +27,10 @@ test:
     - if not exist %LIBRARY_PREFIX%\\bin\\ucrtbase.dll exit 1
 
 about:
-  home: https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
+  home: https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
   license: LicenseRef-Proprietary
   license_file: LICENSE.txt
-  summary: 'Redistributable files for Windows SDK. This is only needed Windows <10'
+  summary: Redistributable files for Windows SDK
 
 extra:
   recipe-maintainers:
