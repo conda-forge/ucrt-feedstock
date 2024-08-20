@@ -19,6 +19,7 @@ requirements:
   host:
   run:
   run_constrained:
+    - vc14_runtime >=14.29.30037
     - vs2015_runtime >=14.29.30037
 
 test:
