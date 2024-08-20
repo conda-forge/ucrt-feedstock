@@ -1,13 +1,13 @@
-About ucrt
-==========
-
-Home: https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
-
-Package license: LicenseRef-Proprietary
+About ucrt-feedstock
+====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ucrt-feedstock/blob/main/LICENSE.txt)
 
-Summary: Redistributable files for Windows SDK. This is only needed Windows <10
+Home: https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+
+Package license: LicenseRef-Proprietary
+
+Summary: Redistributable files for Windows SDK
 
 Current build status
 ====================
@@ -30,7 +30,7 @@ Current build status
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13225&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ucrt-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ucrt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -114,7 +114,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
