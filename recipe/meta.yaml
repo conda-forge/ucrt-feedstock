@@ -1,13 +1,14 @@
-{% set name = "ucrt" %}
-{% set version = "10.0.22621.0" %}
+{% set version = "10.0.26100.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: ucrt
   version: {{ version }}
 
 source:
-  url: https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/22621.1.220506-1250.ni_release_WindowsSDK.iso
-  sha256: 0412fc77e364226c9395e3188a2d0ac5888317fecfba7bc2dbe003c2ddb5b3d3
+  # from https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+  url: https://go.microsoft.com/fwlink/?linkid=2272523
+  fn: release_WindowsSDK.iso
+  sha256: d075796a95cba563c3fc86e6dab10c17530d2b47d5dae3534fbfa7d3dfef541a
 
 build:
   number: 0
@@ -18,6 +19,7 @@ requirements:
   host:
   run:
   run_constrained:
+    - vc14_runtime >=14.29.30037
     - vs2015_runtime >=14.29.30037
 
 test:
@@ -26,10 +28,10 @@ test:
     - if not exist %LIBRARY_PREFIX%\\bin\\ucrtbase.dll exit 1
 
 about:
-  home: https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
+  home: https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
   license: LicenseRef-Proprietary
   license_file: LICENSE.txt
-  summary: 'Redistributable files for Windows SDK. This is only needed Windows <10'
+  summary: Redistributable files for Windows SDK
 
 extra:
   recipe-maintainers:
