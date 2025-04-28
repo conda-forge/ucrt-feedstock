@@ -18,15 +18,17 @@ build:
 
 requirements:
   build:
-  host:
-  run:
+    - 7zip
+    # 7zip itself depends on ucrt. This line ensures that ucrt is taken from conda-forge and not 
+    # from the output directory to avoid circular dependencies.
+    - conda-forge::ucrt
   run_constraints:
     - vs2015_runtime >=14.29.30037
 
 tests:
-  - script:
-      - if not exist %PREFIX%\\ucrtbase.dll exit 1
-      - if not exist %LIBRARY_PREFIX%\\bin\\ucrtbase.dll exit 1
+  - package_contents:
+      bin:
+        - ucrtbase.dll
 
 about:
   license: LicenseRef-MicrosoftWindowsSDK10
