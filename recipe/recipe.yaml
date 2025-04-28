@@ -1,0 +1,42 @@
+schema_version: 1
+
+context:
+  name: ucrt
+  version: 10.0.22621.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/22621.1.220506-1250.ni_release_WindowsSDK.iso
+  sha256: 0412fc77e364226c9395e3188a2d0ac5888317fecfba7bc2dbe003c2ddb5b3d3
+
+build:
+  number: 2
+  skip: not win
+
+requirements:
+  build:
+    - 7zip
+    # 7zip itself depends on ucrt. This line ensures that ucrt is taken from conda-forge and not 
+    # from the output directory to avoid circular dependencies.
+    - conda-forge::ucrt
+  run_constraints:
+    - vs2015_runtime >=14.29.30037
+
+tests:
+  - package_contents:
+      bin:
+        - ucrtbase.dll
+
+about:
+  license: LicenseRef-MicrosoftWindowsSDK10
+  license_file: LICENSE.txt
+  summary: Redistributable files for Windows SDK. This is only needed Windows <10
+  homepage: https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
+
+extra:
+  recipe-maintainers:
+    - isuruf
+    - xhochy
