@@ -3,7 +3,7 @@ About ucrt-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ucrt-feedstock/blob/main/LICENSE.txt)
 
-Home: https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
+Home: https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
 
 Package license: LicenseRef-MicrosoftWindowsSDK10
 
