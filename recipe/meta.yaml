@@ -6,9 +6,9 @@ package:
 
 source:
   # from https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
-  url: https://go.microsoft.com/fwlink/?linkid=2272523
+  url: https://go.microsoft.com/fwlink/?linkid=2326092
   fn: release_WindowsSDK.iso
-  sha256: d075796a95cba563c3fc86e6dab10c17530d2b47d5dae3534fbfa7d3dfef541a
+  sha256: bbaf94039238e84a532088189728133c3753a085a8c2ae060d5eb511ae610f97
 
 build:
   number: 0
